@@ -19,7 +19,7 @@
 - <a href="http://www.linkedin.com/in/raissa-sabino">Raissa Sabino</a>
 - <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>
 - <a href="http://www.linkedin.com/in/thainadedeus">Thainá de Deus Lima</a>
-- <a href="linkedin.com/in/vinicius-souza-santos">Vinicius Souza Santos</a>
+- <a href="http://www.linkedin.com/in/vinicius-souza-santos">Vinicius Souza Santos</a>
 
 ## ✈️ Descrição
 
