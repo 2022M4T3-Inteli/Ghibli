@@ -14,11 +14,11 @@
 </div>
 
 ## 🚀 Integrantes:
-- <a href="linkedin.com/in/arthur-reis-575532241">Arthur Reis</a>
+- <a href="http://www.linkedin.com/in/arthureis03">Arthur Reis</a>
 - <a href="https://www.linkedin.com/in/pedrocrezende/">Pedro de Carvalho Rezende</a>
-- <a href="linkedin.com/in/raissa-sabino-2a00a11b1">Raissa Sabino</a>
+- <a href="http://www.linkedin.com/in/raissa-sabino">Raissa Sabino</a>
 - <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>
-- <a href="linkedin.com/in/thainá-lima-169177232">Thainá de Deus Lima</a>
+- <a href="http://www.linkedin.com/in/thainadedeus">Thainá de Deus Lima</a>
 - <a href="linkedin.com/in/vinicius-souza-santos">Vinicius Souza Santos</a>
 
 ## ✈️ Descrição
