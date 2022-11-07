@@ -26,9 +26,9 @@
 ## 📁 Estrutura de pastas
 
 - 📁 Projeto4<br><br>
-  - 📂<b>documentos</b> <br><br>
-  - <img src="https://user-images.githubusercontent.com/99209356/174968635-a4e7428f-1dec-4a79-a653-746679793d88.svg" width="18px" height="18px"> <b>imagens</b> <br><br>
-  - <img src="https://user-images.githubusercontent.com/99209356/174962579-d242f1e5-3902-4de1-9236-0aba4d48513c.svg" width="18px" height="18px"></a> <b>src</b> <br> <br> 
+  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos">📂</a> <b>documentos</b> <br><br>
+  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/imagens"><img src="https://user-images.githubusercontent.com/99209356/174968635-a4e7428f-1dec-4a79-a653-746679793d88.svg" width="18px" height="18px"></a> <b>imagens</b> <br><br>
+  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/src"><img src="https://user-images.githubusercontent.com/99209356/174962579-d242f1e5-3902-4de1-9236-0aba4d48513c.svg" width="18px" height="18px"></a> <b>src</b> <br><br>
 
 
 ## 💻 Configuração para desenvolvimento
