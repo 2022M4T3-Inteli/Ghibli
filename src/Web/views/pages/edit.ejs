@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Editar - Atech Find It</title>
+</head>
+<body>
+    <div id="edit-wrapper">
+        <div class="navbar">
+            <p>Placeholder</p>
+        </div>
+        <div id="edit-contents">
+            <div id="disclaimer">
+                <h1>Modo Edição</h1>
+                <p>Escolha uma área existente ou registre uma nova para iniciar a edição</p>
+            </div>
+            <div id="select-cards">
+                <div class="carousel" data-carousel>
+                    <ul data-slides>
+                    <% if (areas.length <= 2) { %> 
+                    <li class="slide">
+                    <button id="new-area">
+                        <div id="area-info">
+                            <h1>Criar Nova Área</h1>
+                        </div>
+                    </button>
+                    </li>
+                    <% } %>
+                    <% if (areas.length > 0) { %>
+                    <% areas.forEach(function(area, index) { %>
+                    <li class="slide" 
+                    <% if (index == 0) { %>
+                        data-active
+                    <% } %>
+                    >
+                        <div id="area-info">
+                            <h1 id="area-id"><%= area.ID %> </h1>
+                            <h1 id="area-name"><%= area.Name %></h1>
+                        </div>
+                        <button>
+                            <h1>Editar</h1>
+                        </button>
+                    </li>
+                    <% }); %>
+                    <% } else { %>
+                    <li class="slide" data-active>
+                    <form action="/config" method="POST">
+                        <button type="submit" id="new-area" name="area_id" value="0">
+                            <div id="area-info">
+                                <h1>Criar Nova Área</h1>
+                            </div>
+                        </button>
+                    </form>
+                    </li>
+                    <% } %>
+                    <% if (areas.length < 2) { %> 
+                    <li class="slide">
+                    <button id="new-area">
+                        <div id="area-info">
+                            <h1>Criar Nova Área</h1>
+                        </div>
+                    </button>
+                    </li>
+                    <% } %>
+                    </ul>
+                    <div id="carousel-states">
+                        <button class="carousel-button prev" data-carousel-button="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next" data-carousel-button="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

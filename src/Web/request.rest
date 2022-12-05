@@ -1,0 +1,35 @@
+GET http://localhost:3000/users
+
+### 
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "funcid" : "admoin",
+    "password": "passdsaword",
+    "user_creation_token": "1234"
+}
+
+###
+
+POST http://localhost:3000/users/auth
+Content-Type: application/json
+
+{
+    "funcid" : "admin",
+    "password": "password"
+}
+
+### 
+
+POST http://localhost:3000/users/new
+content-type: application/json
+
+{
+    "user_creation_token": "1234"
+}
+
+###
+
+GET http://localhost:3000/beacon

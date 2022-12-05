@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Login - Atech Find It</title>
+</head>
+<body>
+    <div id="login-contents">
+        <div id="logo-intro">
+            <img src="images/atech-logo.jpg" alt="Logo">
+            <div id="title-subtitle">
+                <h1>Sistema Integrado de Localização Interna</h1>
+                <p>Um sistema Atech</p>
+            </div>
+        </div>
+        <div id="log-in-block">
+            <div id="container">
+                <h1>Entrar</h1>
+                <form action="/users/auth" method="post" >
+                    <input type="text" name="funcid" class="login-inputs" placeholder="ID Funcionário">
+                    <input type="password" name="password" class="login-inputs" placeholder="Senha">
+                    <div id="validate">
+                        <input type="submit" name="validate" value="Validar Credenciais">
+                    </div> 
+                </form>
+                <div id="acess-code">
+                    <p>Tem um código de acesso? 
+                        <button id="modalBtn" class="button">
+                            Clique aqui. 
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="title">
+                    <h2>
+                        Autenticação para Novo Acesso
+                    </h2>
+                    <p>
+                        Utilizando um token de criação de conta, você pode criar uma conta de acesso ao sistema.
+                    </p>
+                </div>
+                <span class="closeBtn">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </span>
+            </div>
+            <div class="modal-body">
+                <h1>
+                    Insira aqui seu token de criação de nova conta.
+                </h1>
+                <p>
+                    Novos usuários devem solicitar um token de criação de conta para um usuário já cadastrado, por questões de segurança. Em caso de dúvidas, entre em contato com o administrador do sistema.
+                </p>
+                <form action="/users/new" method="post" id="creation_token">
+                    <input type="text" name="user_creation_token" id="acess_code" placeholder="Insira aqui o seu código de acesso...">
+                    <input type="submit" value="Verificar Código">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

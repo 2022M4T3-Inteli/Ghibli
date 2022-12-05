@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="steps-container">
+        <div class="navbar">
+            <p>Placeholder</p>
+        </div>
+        <div id="editing-explanation">
+            <div id="steps-and-disc">
+                <div id="steps-progressbar">
+                    <p>01</p>
+                    <div id="progressbar"></div>
+                    <p>02</p>
+                    <p>03</p>
+                    <p>04</p>
+                    <p>05</p>
+                </div>
+                <div id="title-and-explanation">
+                    <h1>Conexão com Beacons</h1>
+                    <p>Para que a localização seja possível, os beacons são essenciais.</p>
+                </div>
+            </div>
+            <div id="main-forms">
+            <% if (current_step >= 0) { %>
+                <div id="step1">
+                    <p>Sua rede atual é </p>
+                    <div id="current-network">
+                        <i class="fa-solid fa-wifi"></i>
+                        <p>Inteli-COLLEGE</p>
+                    </div>
+                    <p>Certifique-se que o código está configurado corretamente para esta rede, e faça quaisquer alterações necessárias <span>antes</span> de iniciar o servidor.</p>
+                </div>
+            <% } %>
+            <% if (current_step >= 1) { %>
+                <div id="step2">
+                    <p>Beacons Disponíveis</p>
+                    <div id="available-beacons">
+                        <form action="/config/con" method="post">
+                            <% info.forEach(function(beacon, index) { %>
+                            <button type="submit" name="connect_beacon" value = <%= beacon.ID %>>
+                                <div class= "beacon">
+                                    <p><%= beacon.Name %></p>
+                                </div>
+                            <% }); %>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+
+            <div id="next-step">
+                <form action="/config/next" method="post">
+                    <button type="submit" name="current_step" value= <%= current_step %> >
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
