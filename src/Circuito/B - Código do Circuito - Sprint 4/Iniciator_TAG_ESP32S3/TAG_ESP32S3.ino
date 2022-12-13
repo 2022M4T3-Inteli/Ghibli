@@ -10,8 +10,8 @@
 
 //Vetores com nomes de rede e senhas dos Access Points
 
-const char* SSIDS[4]={"SHARE-RESIDENTE","baconzitos1","baconzitos2","baconzitos3"}; // inteli-COLLEGE
-const char* PWD[4]={"Share@residente","baconzitos1","baconzitos2","baconzitos3"}; // QazWsx@123
+const char* SSIDS[4]={"inteli-COLLEGE","baconzitos1","baconzitos2","baconzitos3"};
+const char* PWD[4]={"Qazwsx@123","baconzitos1","baconzitos2","baconzitos3"}; 
 
 //Variável que continua ou não o MENU 2
 int parar=0;
@@ -24,13 +24,13 @@ float alterado[3] = {};
 int indice = 0;
 
 // Definições para o FTM
-// Number of FTM frames requested in terms of 4 or 8 bursts (allowed values - 0 (No pref), 16, 24, 32, 64)
+// Número de frames FTMsolicitado em termos de 4 ou 8 bursts (valores permitidos - 0 (No pref), 16, 24, 32, 64)
 const uint8_t FTM_FRAME_COUNT = 16;
-// Requested time period between consecutive FTM bursts in 100’s of milliseconds (allowed values - 0 (No pref) or 2-255)
+//Período de tempo solicitado entre bursts FTM consecutivas em 100 milissegundos (allowed values - 0 (No pref) or 2-255)
 const uint16_t FTM_BURST_PERIOD = 2;
-// Semaphore to signal when FTM Report has been received
+//Semáforo para sinalizar quando o Relatório FTM foi recebido
 xSemaphoreHandle ftmSemaphore;
-// Status of the received FTM Report
+// Status do Relatório FTM recebido
 bool ftmSuccess = true;
 
 
@@ -82,7 +82,7 @@ void postDataToServer() {
   http.addHeader("Content-Type", "application/json");
 
   StaticJsonDocument<200> doc;
-  // Add values in the document
+  // adiciona valores no documento
   //
   // doc["sensor"] = "gps";
   // doc["time"] = 1351824120;
@@ -97,7 +97,7 @@ void postDataToServer() {
   doc["xmedio"] = 234;
   doc["ymedio"] = 1242;
 
-  // Add an array.
+  // Adiciona um array.
   JsonArray data = doc.createNestedArray("data");
   for (int i = 0; i < 3; i++)
   {
@@ -145,14 +145,14 @@ void DadosConexao() {
 }
 
 
-// FTM report handler with the calculated data from the round trip
+//Manipulador de relatórios FTM com os dados calculados da ida e volta
 void onFtmReport(arduino_event_t *event) {
   const char * status_str[5] = {"SUCCESS", "UNSUPPORTED", "CONF_REJECTED", "NO_RESPONSE", "FAIL"};
   wifi_event_ftm_report_t * report = &event->event_info.wifi_ftm_report;
   // Set the global report status
   ftmSuccess = report->status == FTM_STATUS_SUCCESS;
   if (ftmSuccess) {
-    // The estimated distance in meters may vary depending on some factors (see README file)
+    // Comando do cálculo das distâncias em metros
     distancia[indice] = report-> dist_est;
     Serial.printf("FTM Estimate: Distance RAW: %.4f,Distance: %.4f m, Return Time: %u ns\n", (float)report->dist_est, (float)(report->dist_est - 4000 / 1000), report->rtt_est);
     // Pointer to FTM Report with multiple entries, should be freed after use
@@ -161,12 +161,12 @@ void onFtmReport(arduino_event_t *event) {
     Serial.print("FTM Error: ");
     Serial.println(status_str[report->status]);
   }
-  // Signal that report is received
+  // sinal que o relatório foi recebido
   xSemaphoreGive(ftmSemaphore);
 }
 
 
-// Initiate FTM Session and wait for FTM Report
+//Inicio da Sessão FTM e a espera do relatório FTM
 bool getFtmReport() {
   if (!WiFi.initiateFTM(FTM_FRAME_COUNT, FTM_BURST_PERIOD)) {
     Serial.println("FTM Error: Initiate Session Failed");
