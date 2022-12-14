@@ -6,8 +6,8 @@
 */
 #include "WiFi.h"
 // SSID e senha Wifi para fazer a conexao entre a o beacon e tag
-const char * WIFI_FTM_SSID = "beacon2";
-const char * WIFI_FTM_PASS = "beacon2";
+const char * WIFI_FTM_SSID = "beaconG_2";
+const char * WIFI_FTM_PASS = "beaconG_2";
 void setup(){
   Serial.println("Iniciando o SoftAp com suporte ao FTM Responder");
   // Habilitação do AP com suporte ao FTM
