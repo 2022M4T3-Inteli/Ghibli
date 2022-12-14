@@ -10,8 +10,8 @@
 
 //Vetores com nomes de rede e senhas dos Access Points
 
-const char* SSIDS[4]={"SHARE-RESIDENTE","baconzitos1","baconzitos2","baconzitos3"}; // inteli-COLLEGE
-const char* PWD[4]={"Share@residente","baconzitos1","baconzitos2","baconzitos3"}; // QazWsx@123
+const char* SSIDS[4]={"Inteli-COLLEGE","beaconG_1","beaconG_2","beaconG_3"};
+const char* PWD[4]={"QazWsx@123","beaconG_1","beaconG_2","beaconG_3"};
 
 //Variável que continua ou não o MENU 2
 int parar=0;
