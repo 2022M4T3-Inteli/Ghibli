@@ -1,35 +1,47 @@
-GET http://localhost:3000/users
-
-### 
-
-POST http://localhost:3000/users/register
+POST http://localhost:3000/registerESP/beacon 
 Content-Type: application/json
 
 {
-    "funcid" : "admoin",
-    "password": "passdsaword",
-    "user_creation_token": "1234"
-}
-
-###
-
-POST http://localhost:3000/users/auth
-Content-Type: application/json
-
-{
-    "funcid" : "admin",
-    "password": "password"
+  "posicao": "Está na sala",
+  "MACAddress": "F4:12:FA:E2:3E:94",
+  "name": "Matema"
 }
 
 ### 
 
-POST http://localhost:3000/users/new
-content-type: application/json
+
+POST https://6qwj4p-3000.preview.csb.app/registerESP/tags 
+Content-Type: application/json
 
 {
-    "user_creation_token": "1234"
+  "RFID": "3343",
+  "posicao": "Está na sala",
+  "MACAddress": "F4:12:FA:E2:3E:94",
+  "name": "tag1"
 }
 
 ###
 
-GET http://localhost:3000/beacon
+POST http://localhost:3000/beacon/edit-existing
+Content-Type: application/json
+
+{
+  "AreaID"
+}
+
+###
+
+POST http://localhost:3000/registerESP/tags 
+Content-Type: application/json
+
+{
+  "position": "In",
+  "area_ID": 42, 
+  "user_ID": 1234,
+  "MACAddress": "F4:12:FA:E2:3E:94",
+  "name": "tag1"
+}
+
+###
+
+GET http://localhost:3000/registerESP/beacon

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Login - Atech Find It</title>
+</head>
+<body>
+    <div class="background">
+        <img src="/images/background.png" alt="background">
+    </div>
+    <div id="dashboard-Contents">
+        <div class="sidebar">
+            <form action="/dashboard" method="get">
+                <i class="fa-solid fa-house"></i>
+            </form>
+            <div id="localizeOptions">
+                <form action="/beacon" method="get">
+                    <button type="submit">
+'                        <i class="fa-solid fa-satellite"></i>
+'                    </button>
+                </form>
+                <form action="/tags" method="get">
+                    <button type="submit">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="userOptions">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+        <div id="dashboard-Main">
+            <div id="Main-leftSide">
+                <div id="dashboard-Env">
+                    <form action="/dashboard/areas" id="area-select" method="post">
+                        <label for="area-dropdown">Ambiente</label>
+                        <select name="areaID" id="area-dropdown" form="area-select" onchange="submitForm()">
+                            <% areas.forEach(areas => { %>
+                                <% if (areas.ID == area_ID) { %>
+                                    <option value="<%= areas.ID %>" selected><%= areas.Name %></option>
+                                <% } else { %>
+                                    <option value="<%= areas.ID %>"><%= areas.Name %></option>
+                                <% } %>
+                            <% }) %>
+                        </select>
+                    </form>
+                </div>
+                <div id="connectedTags">
+                    <% tags.forEach(function(tags) { %>
+                        <% if (tags.area_id == area_ID) { %>
+                            <% users.forEach(function (users) { %> 
+                                <% if (tags.connected == users.funcid) { %>
+                                <div class="connectedTags Tag<%= tags.id %>">
+                                    <p><%= users.FirstName + " " + users.LastName %></p>
+                                    <form action="/tag/<%= tags.id %>/alert" method="post">
+                                        <input type="submit" value="Enviar Alerta">
+                                    </form>
+                                </div>
+                                <% } %>
+                            <% }) %>
+                        <% } %>
+                    <% }) %>
+                </div>
+            </div>
+            <div id="Main-rightSide">
+                <div id="dashboard-History">
+                    <form action="/dashboard/dates" id="area-select2" method="post">
+                        <label for="area-dropdown">Histórico</label>
+                        <select name="date" id="area-dropdown" form="area-select2" onchange="submitForm3()">
+                            <% history.forEach(function(history) { %>
+                                <% if (history.area_id == area_ID) { %>
+                                    <% if (history.ID == date) { %>
+                                        <option value="<%= history.ID %>" selected><%= history.date %></option>
+                                    <% } else { %>
+                                        <option value="<%= history.ID %>"><%= history.date %></option>
+                                    <% } %>
+                                <% } %>
+                            <% }) %>
+                        </select>
+                    </form>
+                </div>
+                <div id="tagsHistory">
+                    <% history.forEach(function(history) { %>
+                        <% if (history.area_id == area_ID) { %>
+                            <% if (history.ID == date) { %>
+                                <div class="History Tag <%= history.id %>" >
+                                    <% users.forEach(function (users) { %> 
+                                        <% if (history.userid == users.funcid) { %>
+                                            <p><%= users.FirstName + " " + users.LastName %></p>
+                                        <% } %>
+                                    <% }) %>
+                                    <div id="historyAction">
+                                        <p><%= history.time %></p>
+                                        <% if (history.state == "In") { %>
+                                            <p id="actionTaken">Entrou no Ambiente</p>
+                                        <% } else { %>
+                                            <p id="actionTaken">Saiu do Ambiente</p>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            <% } %>
+                        <% } %>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

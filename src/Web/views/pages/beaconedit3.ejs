@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Login - Atech Find It</title>
+</head>
+<body>
+    <div class="background">
+        <img src="/images/background.png" alt="background">
+    </div>
+    <div id="beacon" class="Menu-Contents">
+        <div class="sidebar">
+            <i class="fa-solid fa-house"></i>
+            <div id="localizeOptions">
+                <i class="fa-solid fa-satellite"></i>
+                <i class="fa-solid fa-satellite-dish active_page"></i>
+            </div>
+            <div id="userOptions">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+        <div id="edit" class="Menu-Main">
+            <div class="menu-leftside">
+                <h1>Conexão com Beacons</h1>
+                <p>Certifique-se de que os pré-requisitos estão sendo devidamente atendidos.</p>
+                <div id="next-and-before">
+                    <button type="submit" form="previous-area">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="submit" form="next-area">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="menu-rightside">
+                <p>Código do Beacon</p>
+                <div id="codeDownload">
+                    <p>BEACON_ESP32S3.ino</p>
+                    <a href="../../tools/downloads/BEACON_ESP32S3.ino" download>
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/beacon/step4" method="get" id="next-area"></form>
+    <form action="/beacon/step2" method="get" id="previous-area"></form>
+</body>
+</html>

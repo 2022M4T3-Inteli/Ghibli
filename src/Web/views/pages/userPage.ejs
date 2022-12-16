@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5aec109a86.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js" defer></script>
+    <title>Login - Atech Find It</title>
+</head>
+<body>
+    <div class="background">
+        <img src="/images/background.png" alt="background">
+    </div>
+    <div id="userPage-Contents">
+        <div class="sidebar">
+            <i class="fa-solid fa-house"></i>
+            <div id="localizeOptions">
+                <i class="fa-solid fa-satellite"></i>
+                <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+            <div id="userOptions">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+        <div id="userPage-Main">
+            <div id="Main-PicAndWelcome">
+                <i class="fa-solid fa-circle-user"></i>
+                <p>Alguma mudança, <span>Fernando</span> ?</p>
+            </div>
+            <div id="Main-Forms">
+                <form action="" method="post">
+                    <div id="inputSides">
+                        <div id="formsLeftSide">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Insira seu Primeiro nome aqui...">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="surname" placeholder="Insira seu último sobrenome aqui...">
+                        </div>
+                        <div id="formsRightSide">
+                            <label for="sobrenome">Numero de Identificação</label>
+                            <input type="text" name="funcid" id="funcid" value="admin" disabled>
+                            <label for="sobrenome">Senha</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    <div id="acessCode">
+                        <label for="sobrenome">Código para novos acessos</label>
+                        <input type="text" name="referral" id="referral" value="hexcode" disabled>
+                    </div>
+                    <div id="userForms">
+                        <button type="submit">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

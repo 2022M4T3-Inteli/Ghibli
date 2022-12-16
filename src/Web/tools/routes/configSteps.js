@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 
 // Functions
 const functions = require('../functions/crud');
-const { render } = require('ejs');
 
 var query_data = {
 	table: '`beacons`',
