@@ -34,9 +34,8 @@ Atech Find-It é uma aplicação IoT, a qual é composta de uma interface web ju
   &emsp;| T3_G1_V3_Instruction_Manual.pdf<br>
   &emsp;| T3_G1_V3_Instruction_Manual.docx<br>
 |--> src<br>
-  &emsp;|--> Backend<br>
+  &emsp;|--> Web<br>
   &emsp;|--> Circuito<br>
-  &emsp;|--> Frontend<br>
 | readme.md<br>
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
