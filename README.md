@@ -10,10 +10,6 @@
 # Projeto: Atech Find-It
 
 ## Grupo 1: Ghibli 
-<div align="center">
-<img src="https://cdn.discordapp.com/attachments/1029154257540223048/1033122468828811354/unknown.png">
-<a href="https://github.com/2022M4T3-Inteli/Projeto1" target="_blank">Fonte: Imagem criada pelo próprio Grupo</a>
-</div>
 
 ## 🚀 Integrantes:
 - <a href="http://www.linkedin.com/in/arthureis03">Arthur Reis</a>
@@ -25,39 +21,39 @@
 
 ## ✈️ Descrição
 
-Atech Find-It é uma aplicação IoT, a qual é composta de uma interface web junto a um sistema de hardwares, aplicada na Nuvem. <br><br>
+Atech Find-It é uma aplicação IoT, a qual é composta de uma interface web junto a um sistema de hardwares, aplicada na Nuvem. Seu principal objetivo é a localização de pessoas em ambientes termossenssíveis, apresentando se de fato houve a entrada e/ou saída do funcionário em determinada sala. Além disso, o sistema web pode ser usado por algum gestor para fazer a análise e controle dos equipamentos instalados e saber o status dos mesmos, além de ter noção da localização dos funcionário que estão equipados com a Tag (equipamento que é localizado).
 
-Seu principal objetivo é a localização de pessoas em ambientes termossenssíveis, apresentando se de fato houve a entrada e/ou saída do funcionário em determinada sala. Além disso, o sistema web pode ser usado por algum gestor para fazer a análise e controle dos equipamentos instalados e saber o status dos mesmos, além de ter noção da localização dos funcionário que estão equipados com a Tag (equipamento que é localizado). <br><br>
-
-<p align="center">
-<img src="https://cdn.discordapp.com/attachments/937464667687776307/1053154479677128775/atech.jpg" border="0">
-  <a href="https://github.com/2022M4T3-Inteli/Projeto1">Atech Find-It by Ghibli</a>
-</p>
 
 ## 📁 Estrutura de pastas
 
-- 📁 Projeto1<br><br>
-  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos">📂</a> <b>documentos - IoT Doc + Manual de Instrução</b> <br><br>
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Manual%20de%20Instru%C3%A7%C3%A3o"><img src="https://user-images.githubusercontent.com/99209356/208212913-b27a21a0-102a-4995-946c-61d222abd459.svg" width="18px" height="18px"></a> <b>Manual de Instrução</b> <br><br>
-    
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Sprint_1"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-log.svg" width="18px" height="18px"></a> <b>IotDoc - Sprint 1</b> <br><br>
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Sprint_2"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-log.svg" width="18px" height="18px"></a> <b>IotDoc - Sprint 2</b> <br><br>
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Sprint_3"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-log.svg" width="18px" height="18px"></a> <b>IotDoc - Sprint 3</b> <br><br>
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Sprint_4"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-log.svg" width="18px" height="18px"></a> <b>IotDoc - Sprint 4</b> <br><br>
-    - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/documentos/Sprint_5"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-log.svg" width="18px" height="18px"></a> <b>IotDoc - Sprint 5</b> <br><br>
-    
-  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/imagens"><img src="https://user-images.githubusercontent.com/99209356/174968635-a4e7428f-1dec-4a79-a653-746679793d88.svg" width="18px" height="18px"></a> <b>imagens</b> <br><br>
-  
-  - <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/src"><img src="https://user-images.githubusercontent.com/99209356/174962579-d242f1e5-3902-4de1-9236-0aba4d48513c.svg" width="18px" height="18px"></a> <b>src</b> <br><br>
-    -  <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/src/Circuito"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/arduino.svg" width="18px" height="18px"></a> <b>Circuito</b> <br><br>
-    -  <a href="https://github.com/2022M4T3-Inteli/Projeto1/tree/main/src/Web"><img src="https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/folder-webpack-open.svg" width="18px" height="18px"></a> <b>Web</b> <br><br>
 
+|--> documentos<br>
+  &emsp;| --> outros <br>
+  &emsp;| T3_G1_V4_IoT_Document.pdf<br>
+  &emsp;| T3_G1_V4_IoT_Document.docx<br>
+  &emsp;| T3_G1_V3_Instruction_Manual.pdf<br>
+  &emsp;| T3_G1_V3_Instruction_Manual.docx<br>
+|--> src<br>
+  &emsp;|--> Backend<br>
+  &emsp;|--> Circuito<br>
+  &emsp;|--> Frontend<br>
+| readme.md<br>
 
-## 💻 Configuração para desenvolvimento
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
----<br>
----<br>
----<br>
+- <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+
+- <b>documentos</b>: aqui estão todos os documentos do projeto, incluindo o manual de instruções. Há também uma pasta denominada <b>outros</b> onde estão presentes outros documentos complementares.
+
+- <b>src</b>: todo o código fonte criado para o desenvolvimento do projeto, incluindo os blocos de código do circuito, backend e frontend se aplicáveis.
+
+## 💻 Execução do projeto
+
+Um guia para a execução desse projeto pode ser encontrado no conteúdo do documento "Manual de Instruções", dentro da pasta "documentos".
+
+Se preferir, também é possível acessá-lo a partir do seguinte link:
+
+https://github.com/2022M4T3-Inteli/Ghibli/blob/main/documentos/T3_G1_V3_Instruction_Manual.pdf
 
 ## 🗃 Histórico de lançamentos (versões)
 
